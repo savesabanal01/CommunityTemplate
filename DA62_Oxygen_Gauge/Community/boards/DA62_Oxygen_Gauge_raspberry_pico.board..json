@@ -17,15 +17,15 @@
     "Info": {
       "CanInstallFirmware": true,
       "CanResetBoard": true,
-      "FirmwareBaseName": "mobiflight_template_raspberrypico",
+      "FirmwareBaseName": "DA62_Oxygen_Gauge_raspberrypico",
       "FirmwareExtension": "uf2",
-      "FriendlyName": "MobiFlight Template RaspiPico",
-      "LatestFirmwareVersion": "0.0.1",
-      "MobiFlightType": "Mobiflight Template RaspiPico",
+      "FriendlyName": "DA62 Oxygen Gauge RaspiPico",
+      "LatestFirmwareVersion": "2.5.1",
+      "MobiFlightType": "DA62 Oxygen Gauge RaspiPico",
       "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2",
       "CustomDeviceTypes": [
-        "MOBIFLIGHT_TEMPLATE",
-        "MOBIFLIGHT_TEMPLATE2"
+        "DA62 Oxygen Gauge"
+     
       ],
       "Community": {
         "Project": "Your Project",
