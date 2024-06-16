@@ -1,0 +1,29 @@
+{
+    "$schema": "./mfdevice.schema.json",
+    "Info": {
+      "Label": "3S Simulations DA62 Oxygen Gauge",
+      "Type": "DA62 Oxygen Gauge",
+      "Author": "Save Sabanal",
+      "URL": "https://github.com/savesabanal01/CommunityTemplate",
+      "Version" : "1.0.0"
+    },
+    "Config": {
+      "Pins": [
+
+      ],
+      "isI2C": false
+    },
+    "MessageTypes": [
+      {
+        "id": 0,
+        "label": "Oxygen Gauge PSI Value",
+        "description": "$ will be displayed as Oxygen Gauge PSI Value"
+      },
+      {
+        "id": 1,
+        "label": "Instrument Brightness Value",
+        "description": "$ will be displayed as Instrument Brightness Value"
+      }
+    ]
+  }
+  
