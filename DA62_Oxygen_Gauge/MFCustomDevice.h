@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
-#include "MyCustomClass.h"
+#include "DA62_Oxygen_Gauge.h"
 
 // only one entry required if you have only one custom device
 enum {
