@@ -24,11 +24,11 @@
       "MobiFlightType": "DA62 Oxygen Gauge RaspiPico",
       "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2",
       "CustomDeviceTypes": [
-        "DA62 Oxygen Gauge"
+        "DA62_Oxygen_Gauge"
      
       ],
       "Community": {
-        "Project": "Your Project",
+        "Project": "DA62_Oxygen_Gauge",
         "Website": "https://YourWebsite.com",
         "Docs": "https://YourWebsite.com",
         "Support": "https://YourWebsite.com"

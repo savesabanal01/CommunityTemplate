@@ -2,10 +2,10 @@
     "$schema": "./mfdevice.schema.json",
     "Info": {
       "Label": "3S Simulations DA62 Oxygen Gauge",
-      "Type": "DA62 Oxygen Gauge",
+      "Type": "DA62_Oxygen_Gauge",
       "Author": "Save Sabanal",
       "URL": "https://github.com/savesabanal01/CommunityTemplate",
-      "Version" : "1.0.0"
+      "Version" : "2.5.1"
     },
     "Config": {
       "Pins": [
