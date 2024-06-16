@@ -1,35 +1,64 @@
 #include "DA62_Oxygen_Gauge.h"
 #include "allocateMem.h"
 #include "commandmessenger.h"
+#include <Arduino.h>
+#include <TFT_eSPI.h>
+#include <gauge_face.h>
+#include <needle.h>
 
 /* **********************************************************************************
     This is just the basic code to set up your custom device.
     Change/add your code as needed.
 ********************************************************************************** */
 
-MyCustomClass::MyCustomClass(uint8_t Pin1, uint8_t Pin2)
+long int startTime;
+
+int drefOxygenPSI;         // this stores a handle to the Oxygen PSI
+
+int drefBeacon;           // Beacon status dataref
+
+float OxygenPSIValue;     // Value of the Oxygen PSI
+
+int drefRPM;
+
+float engineRPM = 0;
+
+TFT_eSPI tft = TFT_eSPI(); // Invoke custom library
+
+// Sprites used in display
+TFT_eSprite mainSpr = TFT_eSprite(&tft); // Main sprite. Full screen.
+
+// The main gauge sprite
+TFT_eSprite gaugeSpr = TFT_eSprite(&tft); // Needle Sprite
+
+// The needle need to be sprite so it can be rotated and masked.
+TFT_eSprite needleSpr = TFT_eSprite(&tft); // Needle Sprite
+
+TFT_eSprite needleBackSpr = TFT_eSprite(&tft); // Needle Sprite
+
+// Not passing any PINs
+DA62_Oxygen_Gauge::DA62_Oxygen_Gauge(uint8_t Pin1, uint8_t Pin2)
 {
-    _pin1 = Pin1;
-    _pin2 = Pin2;
+
 }
 
-void MyCustomClass::begin()
+void DA62_Oxygen_Gauge::begin()
 {
 }
 
-void MyCustomClass::attach(uint16_t Pin3, char *init)
+void DA62_Oxygen_Gauge::attach(uint16_t Pin3, char *init)
 {
     _pin3 = Pin3;
 }
 
-void MyCustomClass::detach()
+void DA62_Oxygen_Gauge::detach()
 {
     if (!_initialised)
         return;
     _initialised = false;
 }
 
-void MyCustomClass::set(int16_t messageID, char *setPoint)
+void DA62_Oxygen_Gauge::set(int16_t messageID, char *setPoint)
 {
     /* **********************************************************************************
         Each messageID has it's own value
@@ -65,7 +94,7 @@ void MyCustomClass::set(int16_t messageID, char *setPoint)
     }
 }
 
-void MyCustomClass::update()
+void DA62_Oxygen_Gauge::update()
 {
     // Do something which is required regulary
 }

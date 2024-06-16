@@ -20,7 +20,7 @@ public:
 private:
     bool           getStringFromEEPROM(uint16_t addreeprom, char *buffer);
     bool           _initialized = false;
-    MyCustomClass *_mydevice;
+    DA62_Oxygen_Gauge *_mydevice;
     uint8_t        _pin1, _pin2, _pin3;
     uint8_t        _customType = 0;
 };
