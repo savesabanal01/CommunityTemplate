@@ -70,7 +70,7 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         is used to store the type
     ********************************************************************************** */
     getStringFromEEPROM(adrType, parameter);
-    if (strcmp(parameter, "MOBIFLIGHT_TEMPLATE") == 0)
+    if (strcmp(parameter, "DA62_Oxygen_Gauge") == 0)
         _customType = MY_CUSTOM_DEVICE_1;
     if (strcmp(parameter, "MOBIFLIGHT_TEMPLATE2") == 0)
         _customType = MY_CUSTOM_DEVICE_2;
@@ -125,8 +125,8 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         ********************************************************************************** */
         // In most cases you need only one of the following functions
         // depending on if the constuctor takes the variables or a separate function is required
-        _mydevice = new (allocateMemory(sizeof(DA62_Oxygen_Gauge))) DA62_Oxygen_Gauge(_pin1, _pin2);
-        _mydevice->attach(Parameter1, Parameter2);
+        _mydevice = new (allocateMemory(sizeof(DA62_Oxygen_Gauge))) DA62_Oxygen_Gauge();
+        _mydevice->attach();
         // if your custom device does not need a separate begin() function, delete the following
         // or this function could be called from the custom constructor or attach() function
         _mydevice->begin();
@@ -182,8 +182,8 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         ********************************************************************************** */
         // In most cases you need only one of the following functions
         // depending on if the constuctor takes the variables or a separate function is required
-        _mydevice = new (allocateMemory(sizeof(DA62_Oxygen_Gauge))) DA62_Oxygen_Gauge(_pin1, _pin2);
-        _mydevice->attach(Parameter1, Parameter2);
+        _mydevice = new (allocateMemory(sizeof(DA62_Oxygen_Gauge))) DA62_Oxygen_Gauge();
+        _mydevice->attach();
         // if your custom device does not need a separate begin() function, delete the following
         // or this function could be called from the custom constructor or attach() function
         _mydevice->begin();
