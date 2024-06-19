@@ -41,7 +41,6 @@ void DA62_Oxygen_Gauge::begin()
    delay(1000); // wait for serial monitor to open
    
 
-   Serial.println("\r\nOxygen Gauge Start\n");
 
     digitalWrite(LED_BUILTIN, LOW);
 
@@ -131,8 +130,6 @@ void DA62_Oxygen_Gauge::update()
 
   needleRotDegrees = map(OxygenPSIValue, 0, 4000, -140, 140);
   // Map the Oxygen PSI value to the degrees of rotation of the needle
-
-  Serial.println(needleRotDegrees);
 
   needleSpr.setSwapBytes(false);
   needleSpr.pushRotated(&gaugeSpr, needleRotDegrees, TFT_BLACK);
